@@ -1,0 +1,9 @@
+a, b = int(input()), int(input())
+
+sum_of_a_and_b = a + b
+difference_of_a_and_b = a - b
+product_of_a_and_b = a * b
+
+print(sum_of_a_and_b)
+print(difference_of_a_and_b)
+print(product_of_a_and_b)
