@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    score_arr=[]
+    dictionary=dict()
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        dictionary[name]=score
+        score_arr.append(score)
+    unique_score_arr=list(set(score_arr))
+    unique_score_arr.sort()
+    temp=[]
+    for key,value in dictionary.items():
+        if value==unique_score_arr[1]:
+            temp.append(key)
+    temp.sort()
+    for i in range(len(temp)):
+        print(temp[i])
