@@ -1,0 +1,21 @@
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    
+    scores = student_marks[query_name]
+    
+    sum_ = 0
+    
+    for score in scores:
+        sum_ = sum_ + score
+    
+    average = sum_ / len(scores)
+    
+    format_average_to_two_decimals = f"{average:.2f}"
+    
+    print(format_average_to_two_decimals) 
