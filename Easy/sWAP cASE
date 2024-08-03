@@ -1,0 +1,9 @@
+def swap_case(s):
+    empty_string = ''
+    for character in s:
+        if character == character.upper():
+            empty_string = empty_string + character.lower()
+        elif character == character.lower():
+                empty_string = empty_string + character.upper()
+        
+    return empty_string
