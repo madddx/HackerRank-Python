@@ -1,0 +1,17 @@
+
+from collections import Counter
+
+n = int(input())
+
+words = []
+
+for i in range(n):
+    word = input()
+    words.append(word)
+
+a = Counter(words)
+
+b = list(a.values())
+
+print(len(b))
+print(*b)
