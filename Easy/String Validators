@@ -1,0 +1,44 @@
+if __name__ == '__main__':
+    s = input()
+    for i in s:
+        if i.isalpha():
+            print("True")
+            break
+        elif i.isdigit():
+            print("True")
+            break
+        elif i==s[len(s)-1]:
+            print("False")
+            break
+    for i in s:
+        if i.isalpha():
+            print(i.isalpha())
+            break
+        elif i==s[len(s)-1]:
+            print("False")
+            break
+        else:
+            pass
+    for i in s:
+        if i.isdigit():
+            print(i.isdigit())
+            break
+        elif i==s[len(s)-1]:
+            print("False")
+            break
+    for i in s:
+        if i.islower():
+            print(i.islower())
+            break
+        elif i==s[len(s)-1]:
+            print("False")
+            break
+    s=set(s)
+    s=list(s)
+    for i in s:
+        if i.isupper():
+            print(i.isupper())
+            break
+        elif i==s[len(s)-1]:
+            print("False")
+            break
