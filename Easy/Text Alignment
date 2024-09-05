@@ -1,0 +1,27 @@
+width = int(input())
+text = "H"
+
+def arrow(direction):
+    if direction == "up":
+        for i in range((width*2)):
+            if i%2 !=0:
+                print ((text*i).center(((width*2)-1),' '))
+    elif direction == "down":
+        for i in reversed(range((width*2))):
+            if i%2 !=0:
+                print ((" "*(((width*5)-1)-width)),(text*i).center(((width*2))," "))
+                
+def bars():
+    for i in range(int(width/2)+1):
+        print((text*(width*5)).center((width*6)," "))
+
+def columns():
+    for i in range((width+1)):
+        print(((text*width).center((width+(width-1))," ")),((text*width).center((width+(width*5))," ")))
+   
+if width%2 != 0:
+    arrow("up")
+    columns()
+    bars()
+    columns()
+    arrow("down")
