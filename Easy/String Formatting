@@ -1,0 +1,9 @@
+    for i in range(number):
+        justify_char_length = len(bin(number)[2:])
+        first = i + 1
+        first_str = str(first).rjust(justify_char_length, ' ')     # decimal
+        second = oct(first)[2:].rjust(justify_char_length, ' ')    # octal
+        third = hex(first)[2:].rjust(justify_char_length, ' ')
+        third_str = str(third).upper()         # hexidecimal
+        fourth = bin(first)[2:].rjust(justify_char_length, ' ')    # binary
+        print(f"{first_str} {second} {third_str} {fourth}")
