@@ -1,0 +1,21 @@
+class Mat():
+    def __init__(self, m, n) -> None:
+        self.m = m
+        self.n = n
+    def row(self, k: int) -> str:
+        left = "." + "|.." * k
+        right = left[::-1]
+        row = left + "|" + right
+        return row.center(self.n, "-")
+    def display(self) -> None:
+        for i in range(self.m // 2):
+            print(self.row(i))
+        print("WELCOME".center(self.n, "-"))
+        for i in range(self.m // 2 - 1, -1, -1):
+            print(self.row(i))
+
+
+m, n = [int(x) for x in input().split()]
+assert n == m * 3
+m = Mat(m, n)
+m.display()
