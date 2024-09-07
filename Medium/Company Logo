@@ -1,0 +1,8 @@
+from collections import Counter
+
+if __name__ == '__main__':
+    s = "".join(sorted(list(input())))
+    mc = Counter(s).most_common(3)
+    
+    for c in mc:
+        print(c[0], c[1])
