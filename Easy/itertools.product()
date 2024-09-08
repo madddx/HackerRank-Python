@@ -1,0 +1,7 @@
+from itertools import product
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+c = [a,b]
+result = list(product(*c)) 
+for item in result: 
+    print(item,end=" ")
