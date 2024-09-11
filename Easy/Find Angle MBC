@@ -1,0 +1,6 @@
+import math
+opp= int(input())
+adj = int(input())
+hypo = math.atan(opp/adj)
+r= math.degrees(hypo)
+print(f"{r:.0f}\u00b0")
