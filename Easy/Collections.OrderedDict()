@@ -1,0 +1,17 @@
+from collections import OrderedDict
+
+n = int(input())
+
+dicit = OrderedDict()
+
+for i in range(n):
+    s = input().split()
+    cena = s.pop(-1)
+    
+    if " ".join(s) in dicit:
+        dicit[" ".join(s)] += int(cena)
+    else:
+        dicit[" ".join(s)] = int(cena)
+
+for j in dicit:
+    print(f"{j} {dicit[j]}")
