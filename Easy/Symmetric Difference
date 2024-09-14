@@ -1,0 +1,12 @@
+m = int(input())
+ms = set(map(int, input().split()))
+n = int(input())
+ns = set(map(int, input().split()))
+
+md = ms.difference(ns)
+nd = ns.difference(ms)
+
+u = sorted(md.union(nd))
+
+for x in u:
+    print(x)
