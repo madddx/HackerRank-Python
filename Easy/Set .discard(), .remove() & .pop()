@@ -1,0 +1,12 @@
+def op(cmd,sept):
+    if " " in cmd:
+        cmd,idx = [c.replace(" ","") for c in cmd.split(" ")]
+        eval("sept.%s(%s)"%(cmd,idx))
+    else:
+        eval("sept.%s()"%cmd)
+        
+n = int(input())
+s = set(map(int, input().split()))
+n_cmd = int(input())
+for _ in range(n_cmd):op(input(),s)
+print(sum(s))
