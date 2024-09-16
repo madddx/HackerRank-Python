@@ -1,0 +1,11 @@
+from itertools import product
+
+k, m = list(map(int,input().split()))
+
+lis = [list(map(lambda  x : int(x)**2,input().split()))[1:] for _ in range(k)]
+
+combs = list(product(*lis))
+
+maximum = max(list(map(lambda x : sum(x)%m, combs)))
+
+print(maximum)
