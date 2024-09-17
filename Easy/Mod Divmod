@@ -1,0 +1,7 @@
+n1, n2 = int(input()), int(input())
+
+div, mod = divmod(n1, n2)
+
+print(f"{div}\n{mod}")
+
+print(divmod(n1, n2))
