@@ -1,0 +1,11 @@
+import re
+pattern = r'#[\da-fA-F]{3,6}'
+res = []
+for i in range(int(input())):
+    lines = input()
+    if len(lines)==0:
+        continue
+    if lines[0] != '#':
+        m = re.findall(pattern, lines)
+        [res.append(j) for j in m]
+print(*res, sep='\n')
