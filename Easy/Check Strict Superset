@@ -1,0 +1,11 @@
+A = set(map(int, input().split()))
+n = int(input())
+Flag=True
+for _ in range(n):
+        s1 = set(map(int, input().split()))
+        if A.issuperset(s1) and len(A)>len(s1):
+            continue
+        else:
+            Flag = False
+    
+print(Flag)
