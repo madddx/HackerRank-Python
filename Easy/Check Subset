@@ -1,0 +1,7 @@
+t = int(input())
+
+for i in range(t):
+    inp1, a = input(), set(input().split())
+    inp2, b = input(), set(input().split())
+        
+    print(a.issubset(b))
