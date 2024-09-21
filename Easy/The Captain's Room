@@ -1,0 +1,9 @@
+from collections import Counter
+n = int(input())
+unordered_list = input().split()
+count_dict = Counter(unordered_list)
+
+for element, count in count_dict.items():
+    if count != n:
+        print(element)
+        break
