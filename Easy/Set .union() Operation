@@ -1,0 +1,9 @@
+n = int(input())
+
+ENG = set(input().split())
+
+b = int(input())
+
+FR = set(input().split())
+
+print(len(ENG.union(FR)))
