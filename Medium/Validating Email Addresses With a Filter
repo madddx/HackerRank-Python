@@ -1,0 +1,19 @@
+import string
+def fun(s):
+    l = string.ascii_letters
+    d = string.digits
+    if s.count('@') != 1:
+        return False
+    try:
+        name, domain = s.split('@')
+        web, ext = domain.split('.')
+    except ValueError:
+        return False
+        
+    if not name or not all(x in l + d + '-_' for x in name):
+        return False
+    if not web or not all(x in l + d for x in web):
+        return False
+    if not (1 <= len(ext) <= 3) or not all(x in l for x in ext):
+        return False
+    return True
