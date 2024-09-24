@@ -1,0 +1,17 @@
+import re
+
+def validate_uid(uid):
+    valid_alpha_count = bool(len(re.findall(r"[A-Z]", uid)) >= 2)
+    valid_digit_count = bool(len(re.findall(r"\d", uid)) >= 3)
+    alnum_only = bool(len(re.findall(r"[^\w]", uid)) == 0)
+    no_repeat = not bool(re.search(r"(\w).*\1", uid))
+    valid_char_count = bool(len(uid) == 10)
+    return all([valid_alpha_count, valid_digit_count, alnum_only, no_repeat, valid_char_count])
+    
+testcase_count = int(input())
+for _ in range(testcase_count):
+    uid = input()
+    if validate_uid(uid) == True:
+        print("Valid")
+    else:
+        print("Invalid")
