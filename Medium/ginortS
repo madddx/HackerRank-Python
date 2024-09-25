@@ -1,0 +1,20 @@
+import re
+
+string = input()
+num = list(''.join(re.findall(r'\d+',string)))
+
+even = []
+odd = []
+z = []
+for item in num:
+    if((int(item)%2)==0):
+        if(int(item)==0):
+            z.append(item)
+        else:
+            even.append(item)
+    else:
+        odd.append(item)
+
+word = ''.join(sorted(list(re.sub('[^a-z]', '', string)))) + ''.join(sorted(list(re.sub('[^A-Z]', '', string)))) + ''.join(sorted(odd)) + ''.join(z)+ ''.join(sorted(even))
+
+print(word)
