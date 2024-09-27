@@ -1,0 +1,4 @@
+import re
+s = input()
+rx = re.compile(r"([a-zA-Z0-9])(?=\1)")
+print(rx.search(s)[0] if rx.search(s) else -1)
