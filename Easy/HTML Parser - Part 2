@@ -1,0 +1,27 @@
+from html.parser import HTMLParser
+
+class MyHTMLParser(HTMLParser):
+    def handle_comment(self, data: str) -> None:
+        if not len(data.splitlines()) == 1:
+            print('>>> Multi-line Comment')
+            for line in data.splitlines():
+                print(line)
+        else:
+            print('>>> Single-line Comment')
+            print(data)
+    
+    def handle_data(self, data: str) -> None:
+        if not data == '\n':
+            print('>>> Data')
+            for line in data.splitlines():
+                print(line)
+    
+  
+html = ""
+for i in range(int(input())):
+    html += input().rstrip()
+    html += '\n'
+    
+parser = MyHTMLParser()
+parser.feed(html)
+parser.close()
