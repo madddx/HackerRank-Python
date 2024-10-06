@@ -1,0 +1,3 @@
+import numpy as np
+a, b = [np.array(list(map(int,input().split()))) for _ in range(2)]
+print(np.inner(a,b),np.outer(a,b),sep ='\n')
