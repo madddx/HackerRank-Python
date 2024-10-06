@@ -1,0 +1,4 @@
+def person_lister(f):
+    def inner(people):
+        return [f(p) for p in sorted(people,key = lambda x: int(x[-2]))] 
+    return inner
