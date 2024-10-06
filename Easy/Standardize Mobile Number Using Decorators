@@ -1,0 +1,6 @@
+from re import sub
+def wrapper(f):
+    def fun(l):
+        return f([sub(r"(.*){0,3}(\d{5})(\d{5})$",\
+        r"+91 \2 \3", num)for num in l])
+    return fun
