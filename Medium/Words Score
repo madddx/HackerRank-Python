@@ -1,0 +1,18 @@
+n = input()
+phrase = input()
+vowels = ["a", "e", "i", "o", "u", "y"]
+
+
+if __name__ == '__main__':
+    vowels_count = 0
+    score = []
+    for word in phrase.split():
+        vowels_count = 0
+        for c in word:
+            if c in vowels:
+                vowels_count += 1
+        if vowels_count % 2 == 0:
+            score.append(2)
+        else:
+            score.append(1)
+    print(sum(score))
