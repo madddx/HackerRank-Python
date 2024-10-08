@@ -1,0 +1,5 @@
+def print_from_stream(n, stream=EvenStream()):
+    if isinstance(stream,EvenStream):
+        stream.current = 0
+    for _ in range(n):
+        print(stream.get_next())
