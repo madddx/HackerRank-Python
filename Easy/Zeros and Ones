@@ -1,0 +1,6 @@
+import numpy
+l=list(map(int,input().split())) 
+a=numpy.zeros(([i for i in l]),dtype=numpy.int64) 
+b=numpy.ones(([i for i in l]),dtype=numpy.int64) 
+print(a) 
+print(b)
