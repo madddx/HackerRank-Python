@@ -1,0 +1,12 @@
+import numpy as np
+
+x, y = map(int, input().split())
+
+data = [list(map(int, input().split())) for _ in range(x)]
+
+data = np.array(data)
+
+result = np.min(data, axis = 1)
+
+print(np.max(result))
+
