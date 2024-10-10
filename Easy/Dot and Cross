@@ -1,0 +1,14 @@
+import numpy as np
+
+def input_sample_func(): 
+    return list(map(int,input().split()))
+
+def main():
+    N= int(input()) 
+    A= np.array([input_sample_func() 
+    for i in range(N)]) 
+    B= np.array([input_sample_func() 
+        for i in range(N)]) 
+    print(np.dot(A,B))
+
+main()
