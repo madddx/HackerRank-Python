@@ -1,0 +1,8 @@
+import numpy
+
+n = int(input())
+ls = []
+for i in range(n):
+    ls.append(list(map(float, input().split())))
+arr = numpy.array(ls)
+print(round(numpy.linalg.det(arr), 3))
