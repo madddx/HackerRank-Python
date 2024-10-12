@@ -1,0 +1,10 @@
+def recursion(string, sub_string, index):
+    if index > len(string) - len(sub_string):
+        return 0
+    if string[index:index + len(sub_string)] == sub_string:
+        return 1 + recursion(string, sub_string, index + 1)
+    else:
+        return recursion(string, sub_string, index + 1)
+
+def count_substring(string, sub_string):
+    return recursion(string, sub_string, 0)
