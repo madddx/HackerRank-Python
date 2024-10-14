@@ -1,0 +1,14 @@
+import re
+first_multiple_input = input().rstrip().split()
+n = int(first_multiple_input[0])
+m = int(first_multiple_input[1])
+
+regex = re.compile(r'(?<=\w)([\W]+)(?=\w)')
+matrix = [None] * n * m
+
+for x in range(n):
+    matrix_item = [x for x in input()]
+    for y in range(m):
+        matrix[x+(n*y)] = matrix_item[y]
+ 
+print(re.sub(regex, ' ', ''.join(matrix)))
