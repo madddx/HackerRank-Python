@@ -1,0 +1,16 @@
+import re
+s=input()
+pattern=r'([^aeiouAEIOU|\s|\+|\-]{1,})([aeiouAEIOU]{2,})([^aeiouAEIOU|\s|\+|\-]{1,}).*'
+pattern2='([aeiouAEIOU]{2,})'
+findall=re.findall(pattern,s)
+if not findall:
+    print("-1")
+else:
+    while findall:
+        finditer=re.finditer(pattern,s)
+    
+        for i in finditer:
+            print(i.groups()[1])
+            x=re.search(pattern2,s)
+            s=s[x.end():]
+            findall=re.findall(pattern,s)
